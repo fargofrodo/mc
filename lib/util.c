@@ -351,21 +351,21 @@ size_trunc (uintmax_t size, gboolean use_si)
     if (size > 999999999UL)
     {
         divisor = use_si ? 1000 : 1024;
-        xtra = use_si ? "k" : "K";
+        xtra = use_si ? "k" : "Ki";
 
         if (size / divisor > 999999999UL)
         {
             divisor = use_si ? (1000 * 1000) : (1024 * 1024);
-            xtra = use_si ? "m" : "M";
+            xtra = use_si ? "M" : "Mi";
 
             if (size / divisor > 999999999UL)
             {
                 divisor = use_si ? (1000 * 1000 * 1000) : (1024 * 1024 * 1024);
-                xtra = use_si ? "g" : "G";
+                xtra = use_si ? "G" : "Gi";
             }
         }
     }
-    g_snprintf (x, sizeof (x), "%.0f%s", 1.0 * size / divisor, xtra);
+    g_snprintf (x, sizeof (x), "%.0f %sB", 1.0 * size / divisor, xtra);
     return x;
 }
 
@@ -383,7 +383,7 @@ size_trunc_sep (uintmax_t size, gboolean use_si)
     p += strlen (p) - 1;
     d = x + sizeof (x) - 1;
     *d-- = '\0';
-    while (p >= y && isalpha ((unsigned char) *p))
+    while (p >= y && (isalpha ((unsigned char) *p) || (unsigned char) *p == ' '))
         *d-- = *p--;
     for (count = 0; p >= y; count++)
     {
