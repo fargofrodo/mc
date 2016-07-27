@@ -3311,14 +3311,6 @@ msgid "<readlink failed>"
 msgstr "<спасылка не прачыталася>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "%s байт"
-msgstr[1] "%s байты"
-msgstr[2] "%s байтаў"
-msgstr[3] "%s байтаў"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
 msgstr[0] "%s у %d файле"

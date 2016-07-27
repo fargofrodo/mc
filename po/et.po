@@ -3304,12 +3304,6 @@ msgid "<readlink failed>"
 msgstr "<lahendamatu viit>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "%s bait"
-msgstr[1] "%s baiti"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
 msgstr[0] "%s %d failis"

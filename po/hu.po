@@ -3307,12 +3307,6 @@ msgid "<readlink failed>"
 msgstr "<hibás szim. link>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "%s bájt"
-msgstr[1] "%s bájt"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
 msgstr[0] "%s %d fájlban"

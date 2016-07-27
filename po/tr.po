@@ -3307,12 +3307,6 @@ msgid "<readlink failed>"
 msgstr "<bağ okuması başarısız>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "%s bayt"
-msgstr[1] "%s bayt"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
 msgstr[0] "%s %d dosyası içinde"

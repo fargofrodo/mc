@@ -3308,12 +3308,6 @@ msgid "<readlink failed>"
 msgstr "<readlink failed>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "%s byte"
-msgstr[1] "%s bytes"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
 msgstr[0] "%s σε %d αρχείο"

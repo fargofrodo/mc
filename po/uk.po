@@ -3310,13 +3310,6 @@ msgid "<readlink failed>"
 msgstr "<сталася помилка зчитування посилання>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "байтів: %s"
-msgstr[1] "байтів: %s"
-msgstr[2] "байтів: %s"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
 msgstr[0] "%s у %d файлі"

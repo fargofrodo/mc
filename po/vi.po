@@ -3301,11 +3301,6 @@ msgid "<readlink failed>"
 msgstr "<đọc liên kết không thành công>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "%s byte"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
 msgstr[0] "%s trong %d tập tin"

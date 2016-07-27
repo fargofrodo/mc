@@ -3308,13 +3308,6 @@ msgid "<readlink failed>"
 msgstr "<читање везе није успело>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "%s бајт"
-msgstr[1] "%s бајта"
-msgstr[2] "%s бајтова"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
 msgstr[0] "%s у %d датотеци"

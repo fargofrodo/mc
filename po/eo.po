@@ -3304,12 +3304,6 @@ msgid "<readlink failed>"
 msgstr "<legi ligilon malsukcesis>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "%s bajto"
-msgstr[1] "%s bajtoj"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
 msgstr[0] "%s en %d dosiero"

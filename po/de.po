@@ -3311,16 +3311,10 @@ msgid "<readlink failed>"
 msgstr "<readlink fehlgeschlagen>"
 
 #, c-format
-msgid "%s byte"
-msgid_plural "%s bytes"
-msgstr[0] "%s Byte"
-msgstr[1] "%s Bytes"
-
-#, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
-msgstr[0] "%s Bytes in %d Datei"
-msgstr[1] "%s Bytes in %d Dateien"
+msgstr[0] "%s in %d Datei"
+msgstr[1] "%s in %d Dateien"
 
 msgid "Panelize"
 msgstr "Anordnen"
