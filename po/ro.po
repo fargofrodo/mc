@@ -454,25 +454,25 @@ msgstr ""
 "Verificați variabila de mediu TERM.\n"
 
 msgid "B"
-msgstr ""
+msgstr "o"
 
 msgid "kB"
-msgstr ""
+msgstr "ko"
 
 msgid "KiB"
-msgstr ""
+msgstr "Kio"
 
 msgid "MB"
-msgstr ""
+msgstr "Mo"
 
 msgid "MiB"
-msgstr ""
+msgstr "Mio"
 
 msgid "GB"
-msgstr ""
+msgstr "Go"
 
 msgid "GiB"
-msgstr ""
+msgstr "Gio"
 
 msgid "Cannot create pipe descriptor"
 msgstr ""

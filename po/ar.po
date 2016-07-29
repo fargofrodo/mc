@@ -428,6 +428,27 @@ msgid ""
 "Check the TERM environment variable.\n"
 msgstr ""
 
+msgid "B"
+msgstr ""
+
+msgid "kB"
+msgstr ""
+
+msgid "KiB"
+msgstr ""
+
+msgid "MB"
+msgstr ""
+
+msgid "MiB"
+msgstr ""
+
+msgid "GB"
+msgstr ""
+
+msgid "GiB"
+msgstr ""
+
 msgid "Cannot create pipe descriptor"
 msgstr ""
 

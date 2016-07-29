@@ -453,25 +453,25 @@ msgstr ""
 "Перевірте змінну оточення TERM.\n"
 
 msgid "B"
-msgstr ""
+msgstr "Б"
 
 msgid "kB"
-msgstr ""
+msgstr "кБ"
 
 msgid "KiB"
-msgstr ""
+msgstr "КіБ"
 
 msgid "MB"
-msgstr ""
+msgstr "МБ"
 
 msgid "MiB"
-msgstr ""
+msgstr "МіБ"
 
 msgid "GB"
-msgstr ""
+msgstr "ГБ"
 
 msgid "GiB"
-msgstr ""
+msgstr "ГіБ"
 
 msgid "Cannot create pipe descriptor"
 msgstr ""
