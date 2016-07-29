@@ -346,26 +346,26 @@ size_trunc (uintmax_t size, gboolean use_si)
 {
     static char x[BUF_TINY];
     uintmax_t divisor = 1;
-    const char *xtra = "";
+    const char *xtra = _("B");
 
     if (size > 999999999UL)
     {
         divisor = use_si ? 1000 : 1024;
-        xtra = use_si ? "k" : "Ki";
+        xtra = use_si ? _("kB") : _("KiB");
 
         if (size / divisor > 999999999UL)
         {
             divisor = use_si ? (1000 * 1000) : (1024 * 1024);
-            xtra = use_si ? "M" : "Mi";
+            xtra = use_si ? _("MB") : _("MiB");
 
             if (size / divisor > 999999999UL)
             {
                 divisor = use_si ? (1000 * 1000 * 1000) : (1024 * 1024 * 1024);
-                xtra = use_si ? "G" : "Gi";
+                xtra = use_si ? _("GB") : _("GiB");
             }
         }
     }
-    g_snprintf (x, sizeof (x), "%.0f %sB", 1.0 * size / divisor, xtra);
+    g_snprintf (x, sizeof (x), "%.0f %s", 1.0 * size / divisor, xtra);
     return x;
 }
 
