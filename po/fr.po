@@ -3429,7 +3429,7 @@ msgstr "<échec de readlink>"
 #, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
-msgstr[0] " %s octets dans %d fichier"
+msgstr[0] "%s dans %d fichier"
 msgstr[1] "%s dans %d fichiers"
 
 msgid "Panelize"

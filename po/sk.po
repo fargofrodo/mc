@@ -3523,9 +3523,9 @@ msgstr "<čítanie odkazu zlyhalo>"
 #, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
-msgstr[0] "%s bajt v %d súboroch"
-msgstr[1] "%s bajty v %d súboroch"
-msgstr[2] "%s bajtov v %d súboroch"
+msgstr[0] "%s v %d súboroch"
+msgstr[1] "%s v %d súboroch"
+msgstr[2] "%s v %d súboroch"
 
 msgid "Panelize"
 msgstr "Panelizovať"

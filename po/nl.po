@@ -3513,8 +3513,8 @@ msgstr "<readlink mislukt>"
 #, c-format
 msgid "%s in %d file"
 msgid_plural "%s in %d files"
-msgstr[0] "%s bytes in %d bestand"
-msgstr[1] "%s bytes in %d bestand(en)"
+msgstr[0] "%s in %d bestand"
+msgstr[1] "%s in %d bestand(en)"
 
 msgid "Panelize"
 msgstr "Als venster"
