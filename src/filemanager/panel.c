@@ -1079,7 +1079,7 @@ display_total_marked_size (const WPanel * panel, int y, int x, gboolean size_onl
     buf = size_only ? b_bytes : buffer;
     cols = w->cols - 2;
 
-    g_strlcpy (b_bytes, size_trunc_sep (panel->total, panels_options.kilobyte_si),
+    g_strlcpy (b_bytes, size_trunc (panel->total, panels_options.kilobyte_si),
                sizeof (b_bytes));
 
     if (!size_only)
@@ -1319,8 +1319,8 @@ show_dir (const WPanel * panel)
                 char buffer[BUF_SMALL];
 
                 g_snprintf (buffer, sizeof (buffer), " %s ",
-                            size_trunc_sep (panel->dir.list[panel->selected].st.st_size,
-                                            panels_options.kilobyte_si));
+                            size_trunc (panel->dir.list[panel->selected].st.st_size,
+                                        panels_options.kilobyte_si));
                 tty_setcolor (NORMAL_COLOR);
                 widget_move (w, w->lines - 1, 4);
                 tty_print_string (buffer);
