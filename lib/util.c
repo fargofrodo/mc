@@ -425,104 +425,15 @@ size_trunc_sep (uintmax_t size, gboolean use_si)
 void
 size_trunc_len (char *buffer, unsigned int len, uintmax_t size, int units, gboolean use_si)
 {
-    /* Avoid taking power for every file.  */
-    /* *INDENT-OFF* */
-    static const uintmax_t power10[] = {
-    /* we hope that size of uintmax_t is 4 bytes at least */
-        1ULL,
-        10ULL,
-        100ULL,
-        1000ULL,
-        10000ULL,
-        100000ULL,
-        1000000ULL,
-        10000000ULL,
-        100000000ULL,
-        1000000000ULL
-    /* maximum value of uintmax_t (in case of 4 bytes) is
-        4294967295
-     */
-#if SIZEOF_UINTMAX_T == 8
-                     ,
-        10000000000ULL,
-        100000000000ULL,
-        1000000000000ULL,
-        10000000000000ULL,
-        100000000000000ULL,
-        1000000000000000ULL,
-        10000000000000000ULL,
-        100000000000000000ULL,
-        1000000000000000000ULL,
-        10000000000000000000ULL
-    /* maximum value of uintmax_t (in case of 8 bytes) is
-        18447644073710439615
-     */
-#endif
-    };
-    /* *INDENT-ON* */
-    static const char *const suffix[] = { "", "K", "M", "G", "T", "P", "E", "Z", "Y", NULL };
-    static const char *const suffix_lc[] = { "", "k", "m", "g", "t", "p", "e", "z", "y", NULL };
-
-    const char *const *sfx = use_si ? suffix_lc : suffix;
     int j = 0;
+    const char *y;
 
-    if (len == 0)
-        len = 9;
-#if SIZEOF_UINTMAX_T == 8
-    /* 20 decimal digits are required to represent 8 bytes */
-    else if (len > 19)
-        len = 19;
-#else
-    /* 10 decimal digits are required to represent 4 bytes */
-    else if (len > 9)
-        len = 9;
-#endif
+    for (j = 0; j < units; j++)
+        size *= 1024;        /* Scale to bytes */
 
-    /*
-     * recalculate from 1024 base to 1000 base if units>0
-     * We can't just multiply by 1024 - that might cause overflow
-     * if uintmax_t type is too small
-     */
-    if (use_si)
-        for (j = 0; j < units; j++)
-        {
-            uintmax_t size_remain;
-
-            size_remain = ((size % 125) * 1024) / 1000; /* size mod 125, recalculated */
-            size /= 125;        /* 128/125 = 1024/1000 */
-            size *= 128;        /* This will convert size from multiple of 1024 to multiple of 1000 */
-            size += size_remain;        /* Re-add remainder lost by division/multiplication */
-        }
-
-    for (j = units; sfx[j] != NULL; j++)
-    {
-        if (size == 0)
-        {
-            if (j == units)
-            {
-                /* Empty files will print "0" even with minimal width.  */
-                g_snprintf (buffer, len + 1, "%s", "0");
-            }
-            else
-            {
-                /* Use "~K" or just "K" if len is 1.  Use "B" for bytes.  */
-                g_snprintf (buffer, len + 1, (len > 1) ? "~%s" : "%s", (j > 1) ? sfx[j - 1] : "B");
-            }
-            break;
-        }
-
-        if (size < power10[len - (j > 0 ? 1 : 0)])
-        {
-            g_snprintf (buffer, len + 1, "%" PRIuMAX "%s", size, sfx[j]);
-            break;
-        }
-
-        /* Powers of 1000 or 1024, with rounding.  */
-        if (use_si)
-            size = (size + 500) / 1000;
-        else
-            size = (size + 512) >> 10;
-    }
+    y = size_trunc (size, use_si);
+    g_strlcpy (buffer, y, len + 1);
+    return;
 }
 
 /* --------------------------------------------------------------------------------------------- */
